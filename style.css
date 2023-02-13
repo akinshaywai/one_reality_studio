@@ -1,0 +1,159 @@
+body,
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-width {
+  max-width: 1150px;
+  width: 96%;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+nav .left,
+nav .right span {
+  cursor: pointer;
+}
+
+nav .right span {
+  font-size: 14px;
+}
+
+nav .right a { 
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inner {
+  display: flex;
+}
+
+.inner > div {
+  width: 50%;
+}
+
+.img-wrap {
+  text-align: right;
+}
+
+.img-wrap img {
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-wrapper h1,
+.line-text,
+.description,
+.form-control {
+  max-width: 480px;
+}
+
+.text-wrapper h1 {
+  font-weight: 800;
+  font-size: 67.6px;
+  background: linear-gradient(89.69deg, #8f1bd0 1.4%, #2662d0 99.65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: -5px;
+}
+
+.line-text {
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.description{
+  font-size: 15px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.form-control {
+  display: flex;
+}
+
+.form-control input {
+  max-width: 320px;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: #f3f3f3;
+  padding: 15px 24px;
+  font-size: 14px;
+  color: #6b6b6b;
+}
+
+.form-control input::placeholder {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+
+.form-control button {
+  background-color: #1f67d0;
+  outline: none;
+  border: none;
+  padding: 15px 24px;
+  color: white;
+  font-size: 14px;
+  flex: 1;
+}
+
+@media screen and (max-width: 991px) {
+  .inner > div {
+    width: 100%;
+  }
+
+  .inner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-wrapper {
+    max-width: 460px;
+    margin: 30px auto 50px auto;
+    text-align: center;
+  }
+
+  .text-wrapper h1 {
+    font-size: 45px;
+  }
+
+  .img-wrap {
+    text-align: center;
+  }
+}
