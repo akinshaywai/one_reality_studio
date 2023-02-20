@@ -39,7 +39,7 @@ nav .right span {
   font-size: 14px;
 }
 
-nav .right a { 
+nav .right a {
   text-decoration: none;
   color: inherit;
 }
@@ -96,7 +96,7 @@ nav .right a {
   font-size: 20px;
 }
 
-.description{
+.description {
   font-size: 15px;
   margin-bottom: 16px;
   line-height: 1.5;
@@ -130,6 +130,60 @@ nav .right a {
   color: white;
   font-size: 14px;
   flex: 1;
+  cursor: pointer;
+}
+
+.email-list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.email-list .modal {
+  max-width: 350px;
+  width: 96%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px 16px 50px 20px;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: 0.6s ease-in-out all;
+}
+
+.modal.transition {
+  transform: scale(1);
+}
+
+.close-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-icon img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.sent-icon {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.sent-icon img {
+  width: 70px;
+}
+
+.modal p {
+  text-align: center;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 991px) {
@@ -156,12 +210,13 @@ nav .right a {
   .img-wrap {
     text-align: center;
   }
-  
-  .form-control{
+
+  .form-control {
     flex-direction: column;
   }
 
-  .form-control input, .form-control button{
+  .form-control input,
+  .form-control button {
     width: 100%;
     max-width: unset;
     margin-bottom: 10px;
